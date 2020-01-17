@@ -1,0 +1,19 @@
+name: AssetSizeConsumer
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
+    - uses: ember-performance-monitoring/asset-size@master
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
