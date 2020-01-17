@@ -15,6 +15,6 @@ jobs:
       with:
         fetch-depth: 0
     - run: npm ci
-    - uses: ember-performance-monitoring/asset-size@master
+    - uses: ember-performance-monitoring/asset-size-action@master
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
